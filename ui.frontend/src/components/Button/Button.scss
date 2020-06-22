@@ -1,0 +1,15 @@
+.rh-button {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    color: #444444;
+    margin-right: 10px;
+
+    &-link {
+        color: #444444;
+
+        &:hover {
+            color: #444444;
+            text-decoration: none;
+        }
+    }
+}

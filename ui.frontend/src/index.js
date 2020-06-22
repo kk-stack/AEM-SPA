@@ -25,7 +25,7 @@ import { Constants, ModelManager } from '@adobe/cq-spa-page-model-manager';
 import { createBrowserHistory } from 'history';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import App from './App';
 import './components/import-components';
 import './index.scss';
@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
           cqPath={pageModel[Constants.PATH_PROP]}
           locationPathname={window.location.pathname}
         />
+        <Switch>
+          <Route path="/custom" exact render={() => 'Custom'} />
+        </Switch>
       </Router>,
       document.getElementById('spa-root')
     );
